@@ -1,29 +1,54 @@
-# Pathfinding Visualizer
+# Graph Theory Visualization Tool 🕸️
 
-Welcome to Pathfinding Visualizer! I built this application because I was fascinated by pathfinding algorithms, and I wanted to visualize them in action. I hope that you enjoy playing around with this visualization tool just as much as I enjoyed building it. You can access it here (use Google Chrome!): https://clementmihailescu.github.io/Pathfinding-Visualizer/
+![License](https://img.shields.io/badge/License-MIT-blue.svg) ![React](https://img.shields.io/badge/React-18.2-blue) ![Status](https://img.shields.io/badge/Status-Deployed-success)
 
-## Meet the Algorithms
+**[🔴 VIEW LIVE DEMO HERE](PASTE_YOUR_VERCEL_LINK_HERE)**
 
-This application supports the following algorithms: 
+## 📖 Overview
+The **Graph Theory Visualization Tool** is an interactive web application designed to demonstrate the efficiency and logic of fundamental graph traversal algorithms. It helps users visualize how algorithms like **Dijkstra** and **A*** navigate nodes and edges to discover shortest paths in a weighted, dynamic grid environment.
 
-**Dijkstra's Algorithm** (weighted): the father of pathfinding algorithms; guarantees the shortest path
+This project focuses on the intersection of **Algorithm Design** and **Frontend Performance**, rendering complex logic in real-time at 60fps.
 
-**A* Search** (weighted): arguably the best pathfinding algorithm; uses heuristics to guarantee the shortest path much faster than Dijkstra's Algorithm
+## 🚀 Features
+* **Pathfinding Algorithms:** Visualizes Dijkstra, A* (A-Star), Breadth-First Search (BFS), and Depth-First Search (DFS).
+* **Maze Generation:** Includes Recursive Division logic to automatically generate complex mazes.
+* **Interactive Grid:** Users can draw "Walls" (removing edges) and move Start/End nodes to test edge cases.
+* **Real-Time Animation:** Visualizes the "visited" nodes set and the final "shortest path" backtracking process.
 
-**Greedy Best-first Search** (weighted): a faster, more heuristic-heavy version of A*; does not guarantee the shortest path
+## 🧮 Algorithms Implemented
+1.  **Dijkstra's Algorithm:** The father of pathfinding algorithms; guarantees the shortest path using a weighted graph.
+2.  **A* Search:** Uses heuristics to guarantee the shortest path much faster than Dijkstra.
+3.  **Breath-First Search (BFS):** Great for unweighted graphs; guarantees the shortest path.
+4.  **Depth-First Search (DFS):** A bad algorithm for pathfinding (does not guarantee shortest path), included for educational comparison.
 
-**Swarm Algorithm** (weighted): a mixture of Dijkstra's Algorithm and A*; does not guarantee the shortest-path
+## 🛠️ Tech Stack
+* **Frontend Library:** React.js
+* **Styling:** CSS3 (Animations & Keyframes)
+* **Data Structures:** 2D Arrays, Queues, Stacks
+* **Deployment:** Vercel
 
-**Convergent Swarm Algorithm** (weighted): the faster, more heuristic-heavy version of Swarm; does not guarantee the shortest path
+## ⚙️ How to Run Locally
 
-**Bidirectional Swarm Algorithm** (weighted): Swarm from both sides; does not guarantee the shortest path
+1.  **Clone the repository**
+    ```bash
+    git clone [https://github.com/VanshKardam/Graph-Theory-Tool.git](https://github.com/VanshKardam/Graph-Theory-Tool.git)
+    cd Graph-Theory-Tool
+    ```
 
-**Breath-first Search** (unweighted): a great algorithm; guarantees the shortest path
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
 
-**Depth-first Search** (unweighted): a very bad algorithm for pathfinding; does not guarantee the shortest path
+3.  **Run the application**
+    ```bash
+    npm start
+    ```
+    Open [http://localhost:1337](http://localhost:1337) to view it in the browser.
 
-On top of the pathfinding algorithms listed above, I implemented a **Recursive Division** Maze Generation algorithm.
+## 🧠 Engineering Challenges
+* **State Management:** Optimized React state to handle grid updates without triggering full-page re-renders, ensuring smooth performance on large grids.
+* **Asynchronous Animation:** Decoupled the algorithm's calculation speed from the visualization speed using JavaScript timers to create a fluid user experience.
 
-## More about the Swarm Algorithm
-
-The Swarm Algorithm is an algorithm that I - at least presumably so (I was unable to find anything close to it online) - co-developed with a good friend and colleague, Hussein Farah. The algorithm is essentially a mixture of Dijkstra's Algorithm and A* Search; more precisely, while it converges to the target node like A* , it still explores quite a few neighboring nodes surrounding the start node like Dijkstra's. The algorithm differentiates itself from A* through its use of heuristics: it continually updates nodes' distance from the start node while taking into account their estimated distance from the target node. This effectively "balances" the difference in total distance between nodes closer to the start node and nodes closer to the target node, which results in the triangle-like shape of the Swarm Algorithm. We named the algorithm "Swarm" because one of its potential applications could be seen in a video-game where a character must keep track of a boss with high priority (the target node), all the while keeping tracking of neighboring enemies that might be swarming nearby. 
+---
+*Developed by Vansh*
